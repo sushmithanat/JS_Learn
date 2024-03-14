@@ -603,9 +603,10 @@ if (module.hot) module.hot.accept();
 const controlRecipes = async function() {
     try {
         const id = window.location.hash.slice(1);
-        // console.log(id);
         if (!id) return;
         (0, _recipeViewDefault.default).renderSpinner();
+        // 0) Update results view to mark selected search result
+        (0, _resultsViewDefault.default).update(_model.getSearchResultsPage());
         // 1) Loading recipe
         await _model.loadRecipe(id);
         // 2) Rendering recipe
@@ -636,8 +637,16 @@ const controlPagination = function(goToPage) {
     // 2) Render NEW pagination buttons
     (0, _paginationViewDefault.default).render(_model.state.search);
 };
+const controlServings = function(newServings) {
+    // Update the recipe servings (in state)
+    _model.updateservings(newServings);
+    // Update the recipe view
+    // recipeView.render(model.state.recipe);
+    (0, _recipeViewDefault.default).update(_model.state.recipe);
+};
 const init = function() {
     (0, _recipeViewDefault.default).addHandlerRender(controlRecipes);
+    (0, _recipeViewDefault.default).addHandlerUppdateServings(controlServings);
     (0, _searchViewDefault.default).addHandlerSearch(controlSearchReults);
     (0, _paginationViewDefault.default).addHandlerClick(controlPagination);
 };
@@ -1267,6 +1276,7 @@ parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
+parcelHelpers.export(exports, "updateservings", ()=>updateservings);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _config = require("./config");
 var _helpers = require("./helpers");
@@ -1293,7 +1303,7 @@ const loadRecipe = async function(id) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients
         };
-    // console.log(state.recipe);
+        console.log(state.recipe);
     } catch (err) {
         // console.error(`${err} ✨✨✨`);
         throw err;
@@ -1320,6 +1330,13 @@ const getSearchResultsPage = function(page = state.search.page) {
     const start = (page - 1) * 10; //0
     const end = page * state.search.resultsPerPage; //9
     return state.search.results.slice(start, end);
+};
+const updateservings = function(newServing) {
+    state.recipe.ingredients.forEach((ing)=>{
+        ing.quantity = ing.quantity * newServing / state.recipe.servings;
+    // newQt = oldQt * newServngs / oldServings // 2 * 8 / 4 = 4
+    });
+    state.recipe.servings = newServing;
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./config":"k5Hzs","./helpers":"hGI1E"}],"k5Hzs":[function(require,module,exports) {
@@ -1371,6 +1388,15 @@ class RecipeView extends (0, _viewDefault.default) {
     _parentElement = document.querySelector(".recipe");
     _errorMessage = "We could not fnd the recipe. Please try another one!";
     _message = "";
+    addHandlerUppdateServings(handler) {
+        this._parentElement.addEventListener("click", function(e) {
+            const btn = e.target.closest(".btn--update-servings");
+            if (!btn) return;
+            console.log(btn);
+            const updateTo = +btn.dataset.updateTo;
+            if (updateTo > 0) handler(updateTo);
+        });
+    }
     addHandlerRender(handler) {
         // ['hashchange'].forEach( ev => window.addEventListener(ev, handler));
         [
@@ -1405,12 +1431,12 @@ class RecipeView extends (0, _viewDefault.default) {
             <span class="recipe__info-text">servings</span>
 
             <div class="recipe__info-buttons">
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings - 1}">
                 <svg>
                 <use href="${0, _iconsSvgDefault.default}#icon-minus-circle"></use>
                 </svg>
             </button>
-            <button class="btn--tiny btn--increase-servings">
+            <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}">
                 <svg>
                 <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
                 </svg>
@@ -1770,12 +1796,28 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
     render(data) {
-        console.log(data);
         if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const markup = this._generateMarkup();
         this._clear();
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
+    update(data) {
+        this._data = data;
+        const newMarkup = this._generateMarkup();
+        const newDOM = document.createRange().createContextualFragment(newMarkup);
+        const newElements = Array.from(newDOM.querySelectorAll("*"));
+        const curElements = Array.from(this._parentElement.querySelectorAll("*"));
+        newElements.forEach((newEl, i)=>{
+            const curEl = curElements[i];
+            console.log(curEl, newEl.isEqualNode(curEl));
+            // Updates changed TEXT
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== "") // console.log('🎉 ', newEl.firstChild.nodeValue.trim())
+            curEl.textContent = newEl.textContent;
+            // Update changed ATTRIBUTES
+            if (!newEl.isEqualNode(curEl)) // console.log(Array.from(newEl.attributes));
+            Array.from(newEl.attributes).forEach((attr)=>curEl.setAttribute(attr.name, attr.value));
+        });
     }
     _clear() {
         this._parentElement.innerHTML = "";
@@ -1860,9 +1902,10 @@ class ResultsView extends (0, _viewDefault.default) {
         return this._data.map(this._generateMarkupPreview).join("");
     }
     _generateMarkupPreview(result) {
+        const id = window.location.hash.slice(1);
         return `
         <li class="preview">
-            <a class="preview__link" href="#${result.id}">
+            <a class="preview__link ${result.id === id ? "preview__link--active" : ""}" href="#${result.id}">
               <figure class="preview__fig">
                 <img src="${result.image}" alt="${result.text}" />
               </figure>
