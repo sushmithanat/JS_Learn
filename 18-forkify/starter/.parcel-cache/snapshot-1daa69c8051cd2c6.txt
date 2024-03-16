@@ -1,4 +1,4 @@
-6046
+6040
 140C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\syntax\config\generator.cjs133546911052848445 0
 81C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules133547188557571987 1
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\regions\SL.js133546911332719442 0
@@ -38,7 +38,7 @@
 99C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\readdirp\index.js133546913693170069 0
 133C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\cjs\_iterable_to_array_limit_loose.cjs133546911076390946 0
 116C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\events\src\ValueEmitter.js133546910937109588 0
-73C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist133550488461837517 1
+73C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist133550505115958884 1
 99C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\boolbase\index.js133546910831945904 0
 110C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-tree\lib\syntax\index.js133546911217236912 0
 142C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\core\test\fixtures\config-plugin-not-found\.parcelrc133546910913650487 0
@@ -69,7 +69,7 @@
 99C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@msgpackr-extract133547188557717868 1
 119C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\svgo\lib\svgo\css-select-adapter.d.ts133546911018808333 0
 126C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\csso\cjs\restructure\4-restructShorthand.cjs133546910854455626 0
-81C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\package.json133547188557890903 0
+81C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\package.json133550504434523981 0
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-tree\lib\tokenizer\types.js133546911224911834 0
 157C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\definition-syntax\parse.js133546911153895863 0
 147C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeViewBox.js133546911112518507 0
@@ -465,7 +465,6 @@
 98C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\SECURITY.md133546911182893046 0
 132C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-select\node_modules\entities\lib\esm\encode.js133546910947780814 0
 106C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\sass\types\importer.d.ts133546913707501676 0
-91C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.62406edb.js133546916205110800 0
 108C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\picomatch\lib\picomatch.js133546910861465404 0
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\utils\src\DefaultMap.js133546910948222886 0
 111C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\json-parse-even-better-errors133546910846785534 1
@@ -1168,7 +1167,6 @@
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\term-size\vendor\windows\term-size.exe133546910879822642 0
 133C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_dump.c133546911058399435 0
 114C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\term-size\vendor\macos\.DS_Store133546910829600451 0
-103C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.e37f48ea.js.map.5092.1w133546997524928155 0
 104C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\htmlnano\.eslintignore133546910818448629 0
 122C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\css-sticky.js133546911221842608 0
 169C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\pseudo-selectors\subselects.d.ts133546911037829169 0
@@ -1188,7 +1186,6 @@
 96C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\svgo\README.md133546910826626001 0
 143C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo-node.js133546911120851217 0
 123C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\svgo\plugins\addAttributesToSVGElement.js133546911038570068 0
-95C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.62406edb.js.map133546916205269725 0
 155C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeHiddenElems.js133546911074360164 0
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\svgo\plugins\addClassesToSVGElement.js133546911046784803 0
 133C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_copy.1133546911003919913 0
@@ -1368,6 +1365,7 @@
 117C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\http2.js133546911265225602 0
 123C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\src\_object_spread_props.mjs133546911238390637 0
 98C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\src\env.cpp133546911149958223 0
+96C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.628a78b8.css.map133550505115958884 0
 135C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\css-overscroll-behavior.js133546911217683930 0
 105C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\semver\functions\lte.js133546910995857579 0
 100C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\msgpackr\stream.js133546910989593317 0
@@ -1631,6 +1629,7 @@
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\dependencies\lz4\lib\liblz4.pc.in133546911172810212 0
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\regions\MX.js133546911321558869 0
 104C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\react-refresh\babel.js133546910826782228 0
+95C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.2075dae7.js.map133550505115958884 0
 104C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\mdn-data\css\readme.md133546911022043423 0
 111C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\react-refresh\build-info.json133546910913604601 0
 137C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\sample-mdb.txt133546911192357841 0
@@ -2970,7 +2969,6 @@
 114C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\esm\_ts_metadata.js133546911200407500 0
 153C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\tokenizer\const.js133546910981501222 0
 131C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-select\node_modules\domutils\lib\helpers.d.ts133546911074672580 0
-91C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.e37f48ea.js133550488460645464 0
 147C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\clean\Comment.js133546910954742921 0
 147C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\tokenizer\char-code-definitions.js133546911177413926 0
 122C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\array-find.js133546911025198442 0
@@ -3573,7 +3571,6 @@
 122C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-tree\cjs\definition-syntax\parse.cjs133546911153742803 0
 117C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\forms.js133546911239300885 0
 114C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\esm\_export_star.js133546911177413926 0
-92C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\icons.dfd7a6db.svg133550488460645464 0
 116C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\cosmiconfig\dist\ExplorerSync.d.ts133546911006857421 0
 167C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\PseudoElementSelector.js133546911155751334 0
 128C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-tree\cjs\definition-syntax\SyntaxError.cjs133546911169576772 0
@@ -3642,7 +3639,6 @@
 136C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-select\node_modules\entities\lib\esm\encode.js.map133546911058233704 0
 114C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@mischnic\json-sourcemap\LICENSE133546910823328542 0
 106C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-json133546910841107747 1
-94C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\favicon.8b2f57bf.png133550488460655427 0
 134C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\css-select\node_modules\entities\lib\esm\escape.d.ts133546911114373335 0
 107C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\chokidar\types\index.d.ts133546913695629772 0
 102C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@babel\highlight\lib133546910838572220 1
@@ -3899,7 +3895,6 @@
 100C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\clone\package.json133546910823226449 0
 111C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\chrome-trace-event\CHANGES.md133546910841264057 0
 105C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\chrome-trace-event\dist133546910879154968 1
-96C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.f7626f62.css.map133550488461306094 0
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\regions\KR.js133546911313568111 0
 114C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\core\src\ParcelConfig.js133546911157924186 0
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\chrome-trace-event\dist\trace-event.js133546910824126088 0
@@ -4395,7 +4390,6 @@
 118C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\source-map\dist\wasm.js.flow133546910901040877 0
 129C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\loading-lazy-attr.js133546911318214172 0
 125C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\localecompare.js133546911318387434 0
-97C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\starter.3464ddca.js.map133546916205359491 0
 124C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\magnetometer.js133546911318727630 0
 143C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\mdn-css-backdrop-pseudo-element.js133546911318883562 0
 137C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\caniuse-lite\data\features\mdn-text-decoration-color.js133546911319054759 0
@@ -4841,6 +4835,7 @@
 109C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\cjs\_using.cjs133546911144490751 0
 121C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\cjs\_wrap_native_super.cjs133546911149020952 0
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\helpers\cjs\_write_only_error.cjs133546911149177162 0
+91C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.2075dae7.js133550505115726535 0
 137C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\core\test\fixtures\invalid-targets\package.json133546911216580797 0
 104C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\counter\README.md133546910832258414 0
 130C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@swc\core-win32-x64-msvc\swc.win32-x64-msvc.node133546911232062060 0
@@ -5097,6 +5092,7 @@
 124C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-babel\src\constants.js133546910936091308 0
 120C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-babel\src\types.js133546910956765316 0
 131C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-babel\lib\BabelTransformer.js133546910888629041 0
+94C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\favicon.42656662.png133550505090667642 0
 124C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-babel\lib\constants.js133546910929257976 0
 158C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\Selector.js133546911156173783 0
 118C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\transformer-babel\lib\jsx.js133546910942257439 0
@@ -5424,6 +5420,7 @@
 174C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\prepare\createDeclarationIndexer.js133546910963278994 0
 134C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@babel\highlight\node_modules\supports-color\license133546910839456825 0
 155C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\prepare\index.js133546911039074062 0
+92C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\icons.c14567a0.svg133550505093971704 0
 155C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\AttributeSelector.js133546910938572211 0
 143C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\color.js133546910948816462 0
 148C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Percentage.js133546911047698624 0
@@ -5502,7 +5499,6 @@
 151C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\config\mix.js133546911148708511 0
 154C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\config\parser.js133546911154407932 0
 157C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule\font-face.js133546911070611037 0
-93C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\starter.3464ddca.js133546916205110800 0
 154C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule\import.js133546911107630372 0
 153C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule\media.js133546911131236890 0
 156C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule\supports.js133546911169576772 0
@@ -6040,8 +6036,6 @@
 93C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\.bin\semver133546911357872488 0
 109C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\.bin\update-browserslist-db133546911357872488 0
 113C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\node_modules\.bin\update-browserslist-db.cmd133546911357872488 0
-92C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.f7626f62.css133550488460645464 0
-84C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.html133550488460645464 0
-92C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\icons.21bad73c.svg133550488460645464 0
-91C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\logo.726d37a8.png133550488460675380 0
-95C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.e37f48ea.js.map133550488460913550 0
+92C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.628a78b8.css133550505115551308 0
+84C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\index.html133550505115551308 0
+91C:\Users\acer\OneDrive\Documents\Desktop\JS_LEARN\18-forkify\starter\dist\logo.833dfef5.png133550505090715035 0
