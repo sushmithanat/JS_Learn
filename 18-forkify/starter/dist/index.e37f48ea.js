@@ -673,9 +673,13 @@ const controlAddRecipe = async function(newRecipe) {
         (0, _recipeViewDefault.default).render(_model.state.recipe);
         // Success message
         (0, _addRecipeViewDefault.default).renderMessage();
+        // Render bookmark view
+        (0, _bookmarksViewDefault.default).render(_model.state.bookmarks);
+        // Change ID in URL
+        window.history.pushState(null, "", `#${_model.state.recipe.id}`);
         // Close form window
         setTimeout(function() {
-        // addRecipeView.toggleWindow();
+            (0, _addRecipeViewDefault.default).toggleWindow();
         }, (0, _config.MODAL_CLOSE_SEC) * 1000);
     } catch (err) {
         console.error("\uD83C\uDFAD\uD83C\uDFA2", err);
@@ -1352,7 +1356,7 @@ const createRecipeObject = function(data) {
 };
 const loadRecipe = async function(id) {
     try {
-        const data = await (0, _helpers.getJSON)(`${(0, _config.API_URL)}${id}`);
+        const data = await (0, _helpers.AJAX)(`${(0, _config.API_URL)}${id}?key=${(0, _config.KEY)}`);
         let { recipe } = data.data;
         state.recipe = createRecipeObject(data);
         if (state.bookmarks.some((bookmark)=>bookmark.id === id)) state.recipe.bookmarked = true;
@@ -1366,13 +1370,16 @@ const loadRecipe = async function(id) {
 const loadSearchResults = async function(query) {
     try {
         state.search.query = query;
-        const data = await (0, _helpers.getJSON)(`${(0, _config.API_URL)}?search=${query}`);
+        const data = await (0, _helpers.AJAX)(`${(0, _config.API_URL)}?search=${query}&key=${(0, _config.KEY)}`);
         state.search.results = data.data.recipes.map((rec)=>{
             return {
                 id: rec.id,
                 title: rec.title,
                 publisher: rec.publisher,
-                image: rec.image_url
+                image: rec.image_url,
+                ...rec.key && {
+                    key: rec.key
+                }
             };
         });
         state.search.page = 1;
@@ -1422,7 +1429,7 @@ const clearBookmarks = function() {
 const uploadRecipe = async function(newRecipe) {
     try {
         const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith("ingredient") && entry[1] !== "").map((ing)=>{
-            const ingArr = ing[1].replaceAll(" ", "").split(",");
+            const ingArr = ing[1].split(",").map((el)=>el.trim());
             if (ingArr.length !== 3) throw new Error("Wrong ingredient format! Please use the correct format");
             const [quantity, unit, description] = ingArr;
             return {
@@ -1440,7 +1447,7 @@ const uploadRecipe = async function(newRecipe) {
             servings: +newRecipe.servings,
             ingredients
         };
-        const data = await (0, _helpers.sendJSON)(`${(0, _config.API_URL)}?key=${(0, _config.KEY)}`, recipe);
+        const data = await (0, _helpers.AJAX)(`${(0, _config.API_URL)}?key=${(0, _config.KEY)}`, recipe);
         state.recipe = createRecipeObject(data);
         addBookmark(state.recipe);
         console.log(data);
@@ -1460,14 +1467,13 @@ parcelHelpers.export(exports, "MODAL_CLOSE_SEC", ()=>MODAL_CLOSE_SEC);
 const API_URL = `https://forkify-api.herokuapp.com/api/v2/recipes/`;
 const TIMEOUT_SEC = 10;
 const RES_PER_PAGE = 10;
-const KEY = "e25c387a-b3aa-4c90-878b-9d5243b674bd";
+const KEY = "a52005b0-5638-4253-aa18-9faed72256ce";
 const MODAL_CLOSE_SEC = 2.5;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hGI1E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getJSON", ()=>getJSON);
-parcelHelpers.export(exports, "sendJSON", ()=>sendJSON);
+parcelHelpers.export(exports, "AJAX", ()=>AJAX);
 var _config = require("./config");
 const timeout = function(s) {
     return new Promise(function(_, reject) {
@@ -1476,28 +1482,15 @@ const timeout = function(s) {
         }, s * 1000);
     });
 };
-const getJSON = async function(url) {
+const AJAX = async function(url, uploadData) {
     try {
-        const res = await Promise.race([
-            fetch(url),
-            timeout((0, _config.TIMEOUT_SEC))
-        ]);
-        const data = await res.json();
-        if (!res.ok) throw new Error(`${data?.message} ${res.status}`);
-        return data;
-    } catch (err) {
-        throw err;
-    }
-};
-const sendJSON = async function(url, uploadData) {
-    try {
-        const fetchPro = fetch(url, {
+        const fetchPro = await uploadData ? fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(uploadData)
-        });
+        }) : fetch(url);
         const res = await Promise.race([
             fetchPro,
             timeout((0, _config.TIMEOUT_SEC))
@@ -1508,7 +1501,43 @@ const sendJSON = async function(url, uploadData) {
     } catch (err) {
         throw err;
     }
-};
+} /*
+export const getJSON = async function(url){
+    try{
+        const res = await Promise.race([fetch(url), timeout(TIMEOUT_SEC)]);
+        const data = await res.json();
+    
+        if(!res.ok) throw new Error(`${data?.message} ${res.status}`);
+
+        return data;
+    }
+    catch(err){
+        throw err;
+    }
+}
+
+export const sendJSON = async function(url, uploadData){
+    try{
+        const fetchPro = fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(uploadData),
+        });
+
+        const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+        const data = await res.json();
+    
+        if(!res.ok) throw new Error(`${data?.message} ${res.status}`);
+
+        return data;
+    }
+    catch(err){
+        throw err;
+    }
+}
+*/ ;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./config":"k5Hzs"}],"l60JC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1586,7 +1615,10 @@ class RecipeView extends (0, _viewDefault.default) {
             </div>
         </div>
 
-        <div class="recipe__user-generated">
+        <div class="recipe__user-generated ${this._data.key ? "" : "hidden"}">
+            <svg>
+            <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+            </svg>
         </div>
         <button class="btn--round btn--bookmark">
             <svg class="">
@@ -1937,7 +1969,15 @@ var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
-    render(data, render = true) {
+    /**
+     * Render the received object to the DOM
+     * @param {Object | Object[]} data The data to be rendered (eg: recipe)
+     * @param {boolean} [render=true] If false, create markup string instead of rendering to the DOM 
+     * @returns {undefined | String}A markup string is returned if render = false
+     * @this {Object} View instance
+     * @author Sushmitha
+     * @todo Finish implementation
+     */ render(data, render = true) {
         if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const markup = this._generateMarkup();
@@ -2068,6 +2108,12 @@ class PreviewView extends (0, _viewDefault.default) {
               <div class="preview__data">
                 <h4 class="preview__title">${this._data.title}</h4>
                 <p class="preview__publisher">${this._data.publisher}</p>
+              
+                <div class="preview__user-generated ${this._data.key ? "" : "hidden"}">
+                    <svg>
+                    <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+                    </svg>
+                </div>
               </div>
             </a>
         </li>
